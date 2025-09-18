@@ -1,0 +1,15 @@
+# функція для обчислення кореня 10-го степеня
+def compute_root(n):
+    n10_str = str(n) + "10"         # формуємо n10
+    big_number = int(n10_str * 4)   # повторюємо 4 рази
+    result = big_number ** (1/10)   # корінь 10-го степеня
+    return result
+
+# введення даних користувачем
+input_numbers = input("Введіть числа через пробіл: ").split()
+
+# перетворення на числа та обчислення
+for num_str in input_numbers:
+    n = int(num_str)
+    output = compute_root(n)
+    print(output)
